@@ -27,7 +27,7 @@ namespace DotnetIteration
    */
     public static IEnumerable<string> Yelling(List<string> words)
     {
-      throw new System.NotImplementedException();
+      return words.Select(word => word.ToUpper());
     }
 
     /* 
@@ -38,8 +38,11 @@ namespace DotnetIteration
 
     public static IEnumerable<int> Double(List<int> numbers)
     {
-      throw new System.NotImplementedException();
+      var doubleTrouble = numbers.Select(number => { return number * 2; });
+
+      return doubleTrouble;
     }
+
     /*
       * 3) Define a function stringyIndexes() that takes an list of
       * strings as an argument and returns a new list with each string
@@ -47,7 +50,9 @@ namespace DotnetIteration
       */
     public static IEnumerable<string> StringyIndexes(List<string> data)
     {
-      throw new System.NotImplementedException();
+      var stringyIndexes = data.Select(variable => { return variable + " is at index " + data.IndexOf(variable); });
+
+      return stringyIndexes;
     }
     /*
        * 4) Define a function onlyTheEvenSurvive that accepts an list of
@@ -56,7 +61,10 @@ namespace DotnetIteration
 
     public static IEnumerable<int> OnlyTheEvenSurvive(List<int> data)
     {
-      throw new System.NotImplementedException();
+      var onlyTheEvenSurvive = data.Where(num => { return num % 2 == 0; });
+
+      return onlyTheEvenSurvive;
+
     }
     /*
         * 5) Define a function onlyTheEvenIndexedSurvive that accepts an list of
@@ -64,7 +72,10 @@ namespace DotnetIteration
         */
     public static IEnumerable<int> OnlyTheEvenIndexedSurvive(List<int> data)
     {
-      throw new System.NotImplementedException();
+      var onlyTheEvenIndexedSurvive = data.Where(num => { return data.IndexOf(num) % 2 == 0; });
+      return onlyTheEvenIndexedSurvive;
+
+      //return data.Where((w, i) => i % 2 ==0);***********************
     }
     /*
       * 6)  Define a function bestMoviesOfTheYear that accepts an list of
@@ -79,8 +90,9 @@ namespace DotnetIteration
       *   score: 99
       * }
       */
-    public static IEnumerable<string> BestMovieOfTheYear(List<Movie> data, int year)
+    public static IEnumerable<string> BestMovieOfTheYear(List<Movie> data, int year) // foreach variable score in movie...
     {
+      //var bestMovieOfTheYear = data.Where(())
       throw new System.NotImplementedException();
     }
 
