@@ -38,9 +38,7 @@ namespace DotnetIteration
 
     public static IEnumerable<int> Double(List<int> numbers)
     {
-      var doubleTrouble = numbers.Select(number => { return number * 2; });
-
-      return doubleTrouble;
+      return numbers.Select(number => { return number * 2; });
     }
 
     /*
@@ -50,9 +48,7 @@ namespace DotnetIteration
       */
     public static IEnumerable<string> StringyIndexes(List<string> data)
     {
-      var stringyIndexes = data.Select(variable => { return variable + " is at index " + data.IndexOf(variable); });
-
-      return stringyIndexes;
+      return data.Select(variable => { return variable + " is at index " + data.IndexOf(variable); });
     }
     /*
        * 4) Define a function onlyTheEvenSurvive that accepts an list of
@@ -61,10 +57,7 @@ namespace DotnetIteration
 
     public static IEnumerable<int> OnlyTheEvenSurvive(List<int> data)
     {
-      var onlyTheEvenSurvive = data.Where(num => { return num % 2 == 0; });
-
-      return onlyTheEvenSurvive;
-
+      return data.Where(num => { return num % 2 == 0; });
     }
     /*
         * 5) Define a function onlyTheEvenIndexedSurvive that accepts an list of
@@ -72,11 +65,7 @@ namespace DotnetIteration
         */
     public static IEnumerable<int> OnlyTheEvenIndexedSurvive(List<int> data)
     {
-      var onlyTheEvenIndexedSurvive = data.Where((num, index) => { return index % 2 == 0; });
-
-      return onlyTheEvenIndexedSurvive;
-
-      //return data.Where((w, i) => i % 2 ==0);***********************
+      return data.Where((num, index) => { return index % 2 == 0; });
     }
     /*
       * 6)  Define a function bestMoviesOfTheYear that accepts an list of
@@ -93,8 +82,7 @@ namespace DotnetIteration
       */
     public static IEnumerable<string> BestMovieOfTheYear(List<Movie> data, int year) // foreach variable score in movie...
     {
-      var bestMovieOfTheYear = data.Where(movie => movie.Score > 90 && movie.Year == year).Select(movie => movie.Name);
-      return bestMovieOfTheYear;
+      return data.Where(movie => movie.Score > 90 && movie.Year == year).Select(movie => movie.Name);
     }
 
     /*
@@ -105,7 +93,7 @@ namespace DotnetIteration
 
     public static bool EveryoneIsOdd(List<int> data)
     {
-      throw new System.NotImplementedException();
+      return data.All(num => num % 2 != 0);
     }
     /*
       * 8) Define a function findTheNeedle that accepts an list of
@@ -114,7 +102,7 @@ namespace DotnetIteration
       */
     public static string FindTheNeedle(List<string> data)
     {
-      throw new System.NotImplementedException();
+      return data.Single(word => word.Contains("needle"));
     }
 
 

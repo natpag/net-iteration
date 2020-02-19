@@ -79,7 +79,7 @@ namespace DotnetIteration
 
 
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void EveryoneIsOdd()
     {
       var trueData = new List<int> { 9, 15, 27, 101, 33 };
@@ -88,7 +88,7 @@ namespace DotnetIteration
       Assert.False(Iteration.EveryoneIsOdd(falseData));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void FindTheNeedle()
     {
       var data = new List<string> { "one", "time", "there was a needle at", "the market" };
@@ -97,7 +97,7 @@ namespace DotnetIteration
     }
 
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void FindTheNeedleIndex()
     {
       var data = new List<string> { "one", "time", "there was a needle at", "the market" };
