@@ -106,7 +106,7 @@ namespace DotnetIteration
     }
 
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void SomeoneToLove()
     {
       var falseData = new List<string> { "how", "now", "brown", "cow" };

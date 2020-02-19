@@ -114,7 +114,7 @@ namespace DotnetIteration
 
     public static int FindTheNeedleIndex(List<string> data)
     {
-      throw new System.NotImplementedException();
+      return data.FindIndex(word => word.Contains("needle"));
     }
 
     /*
@@ -126,7 +126,7 @@ namespace DotnetIteration
 
     public static bool SomeoneToLove(List<string> data)
     {
-      throw new System.NotImplementedException();
+      return data.Any(word => word.Length == 4);
     }
   }
 
