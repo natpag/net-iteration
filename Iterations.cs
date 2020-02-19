@@ -72,7 +72,8 @@ namespace DotnetIteration
         */
     public static IEnumerable<int> OnlyTheEvenIndexedSurvive(List<int> data)
     {
-      var onlyTheEvenIndexedSurvive = data.Where(num => { return data.IndexOf(num) % 2 == 0; });
+      var onlyTheEvenIndexedSurvive = data.Where((num, index) => { return index % 2 == 0; });
+
       return onlyTheEvenIndexedSurvive;
 
       //return data.Where((w, i) => i % 2 ==0);***********************
@@ -92,8 +93,8 @@ namespace DotnetIteration
       */
     public static IEnumerable<string> BestMovieOfTheYear(List<Movie> data, int year) // foreach variable score in movie...
     {
-      //var bestMovieOfTheYear = data.Where(())
-      throw new System.NotImplementedException();
+      var bestMovieOfTheYear = data.Where(movie => movie.Score > 90 && movie.Year == year).Select(movie => movie.Name);
+      return bestMovieOfTheYear;
     }
 
     /*

@@ -55,7 +55,7 @@ namespace DotnetIteration
     }
 
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void BestMovieOfTheYear()
     {
       var data = new List<Movie> {
